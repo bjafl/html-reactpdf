@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "src/App.tsx",
+    "src/PdfDocTest.tsx",
+    "src/TableTest.tsx",
+    "src/testContent.ts",
+    "src/testContent2.ts",
+    "src/main.tsx"
+  ]
+}
