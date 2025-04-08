@@ -1,8 +1,6 @@
 import { View } from "@react-pdf/renderer";
 import { useTableContext } from "./tableContext";
 import {
-  FlexboxStyle,
-  LayoutStyle,
   Style as PDFStyle,
 } from "@react-pdf/stylesheet";
 import { useMemo } from "react";
@@ -32,18 +30,16 @@ export default function TableCell({ children, style }: TableCellProps) {
     height: "100%",
     width: "100%",
     display: "flex",
-    //flexWrap: "wrap",
     margin: 0,
-    flex: 1, // TODO
+    flex: 1,
     paddingVertical: 2,
   };
     const borderStyle = getCellBorderStyles({ style: { ...defaultStyle, ...style }, row: rowNr, col: colNr });
     return {
-    ...defaultStyle,
-    //...currentRowStyle,
-    ...style,
-    ...flexStyle,
-    ...borderStyle,
+      ...defaultStyle,
+      ...style,
+      ...flexStyle,
+      ...borderStyle,
     };
   }, [colNr, defaultStyle, getCellBorderStyles, rowNr, style]);
   return <View style={combinedStyle}>{children}</View>;

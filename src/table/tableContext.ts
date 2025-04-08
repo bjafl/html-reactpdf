@@ -140,8 +140,7 @@ export const useTableContext = () => {
                 cellBorderStyle[colorKey] = baseStyle[colorKey] || baseStyle.borderColor;
                 cellBorderStyle[styleKey] = baseStyle[styleKey] || baseStyle.borderStyle;
             }
-            if (rowIndex === 1) {
-            }
+            // No special handling needed for first row currently
             if (updateMap) {
                 setBorderKey(side as BorderSide, hasBorder ? BorderSetValue.FALSE : BorderSetValue.TRUE, rowIndex, colIndex);
             }

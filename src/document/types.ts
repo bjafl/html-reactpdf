@@ -1,7 +1,6 @@
 
 import { Style as PDFStyle } from '@react-pdf/stylesheet';
 import { PageSize } from '@react-pdf/types';
-import React from 'react';
 import { HTMLProps } from '../html/HTML';
 
 export interface HtmlToPdfProps {
