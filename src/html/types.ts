@@ -1,3 +1,6 @@
+import { ParsedCssStyles } from "../styles/cssNodeParser";
+import { Styles as PDFStyles } from "@react-pdf/renderer";
+
 /**
  * Result of HTML parsing operation
  */
@@ -6,6 +9,9 @@ export interface HtmlParseResult {
     body: HTMLElement;
     /** The HTML head element containing metadata (optional) */
     head?: HTMLElement;
+    parsedStyles?: ParsedCssStyles[];
+    convertedStyles?: PDFStyles;
+    title?: string;
 }
 
 /**

@@ -2,7 +2,7 @@ import { useHtmlContext, HtmlContext } from "./htmlContext";
 import { Styles as PDFStyles } from "@react-pdf/renderer";
 import { RenderHtml } from "./render";
 import { registerOpenEmojiFont } from "./emojiFont";
-import { FC, useEffect, useMemo } from "react";
+import React, { FC, useEffect, useMemo } from "react";
 
 /**
  * HTMLProps - Configuration options for the HTML component

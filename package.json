@@ -1,5 +1,5 @@
 {
-  "name": "html-to-react-pdf",
+  "name": "html-reactpdf",
   "version": "0.1.0",
   "description": "HTML to PDF converter for React PDF",
   "type": "module",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/html-to-react-pdf"
+    "url": "https://github.com/bjafl/html-reactpdf"
   },
   "license": "MIT",
   "dependencies": {
@@ -44,6 +44,7 @@
     "@react-pdf/renderer": "^4.3.0",
     "@react-pdf/stylesheet": "^6.1.0",
     "@types/css-tree": "^2.3.10",
+    "@types/node": "^22.14.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",

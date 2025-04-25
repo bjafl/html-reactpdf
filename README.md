@@ -5,7 +5,7 @@ An HTML-to-PDF converter component for React PDF. This library allows you to eas
 ## Installation
 
 ```bash
-npm install html-to-react-pdf @react-pdf/renderer
+npm install html-reactpdf @react-pdf/renderer
 ```
 
 ## Features
@@ -22,7 +22,7 @@ npm install html-to-react-pdf @react-pdf/renderer
 ### Basic Example
 
 ```jsx
-import { HtmlToPdfDoc, HtmlToPdfViewer } from 'html-to-react-pdf';
+import { HtmlToPdfDoc, HtmlToPdfViewer } from 'html-reactpdf';
 import { PDFViewer } from '@react-pdf/renderer';
 
 const MyDocument = () => (
@@ -48,7 +48,7 @@ const MyDocument = () => (
 ### With Headers and Footers
 
 ```jsx
-import { HtmlToPdfDoc, Header, Footer } from 'html-to-react-pdf';
+import { HtmlToPdfDoc, Header, Footer } from 'html-reactpdf';
 
 const DocumentWithHeaderAndFooter = () => (
   <HtmlToPdfDoc>
@@ -69,7 +69,7 @@ const DocumentWithHeaderAndFooter = () => (
 ### Custom Styling
 
 ```jsx
-import { HtmlToPdfDoc } from 'html-to-react-pdf';
+import { HtmlToPdfDoc } from 'html-reactpdf';
 
 const customStyles = {
   h1: {

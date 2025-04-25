@@ -53,6 +53,7 @@ export function inlineToStyle(
   // TODO: extra checks for valid values and transformations here should be moved to other function.
   Object.entries(expandedStyle).forEach(([key, value]) => {
     if (validateStyleKey(key)) {
+      key = key as StyleKey;
       if (key === "fontFamily") {
         if (!styleContext.validFonts?.includes(value)) {
           //TODO: More robust check
@@ -75,22 +76,22 @@ export function inlineToStyle(
           key.includes("Width") &&
           validValue === 0
         ) {
-          validStyle[key] = 0;
+          validStyle[key as StyleKey] = 0;
           return;
         }
-        validStyle[key] = validValue;
+        validStyle[key as StyleKey] = validValue;
       } catch {
         if (["none", undefined, "undefined"].includes(value)) {
           if (key === "border") return;
           if (key.includes("border") && key.toLowerCase().includes("width")) {
-            validStyle[key] = 0;
+            validStyle[key as StyleKey] = 0;
             return;
           }
-          validStyle[key] = 0;
+          validStyle[key as StyleKey] = 0;
           return;
         }
         if (isValidStyleValue(key, value)) {
-          validStyle[key] = value;
+          validStyle[key as StyleKey] = value;
           return;
         }
 
@@ -129,7 +130,7 @@ export const ensureValidStyle: StyleProcessor<
             ...styleContext,
             ignoreInvalidUnit: false
           });
-          validStyle[key] = validValue;
+          validStyle[key as StyleKey] = validValue;
         } catch (e) {
           handleInvalid(e as Error, onInvalid);
         }
@@ -286,7 +287,7 @@ export const convertToPDFSemiSafeStyle: StyleProcessor = (style, options?) => {
             ...styleContext,
             ignoreInvalidUnit: false
           });
-          ptTransformedStyle[key] = transformedValue;
+          ptTransformedStyle[key as StyleKey] = transformedValue;
         }
       } catch (e) {
         if (isValidStyleValue(key, value, onInvalid)) {

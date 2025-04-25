@@ -96,8 +96,8 @@ export function parseHtml(
   // Try to get styles from cache first
   if (enableCaching && styleCache.has(stylesKey)) {
     const cachedStyles = styleCache.get(stylesKey);
-    parsedStyles = cachedStyles.parsedStyles;
-    convertedStyles = cachedStyles.convertedStyles;
+    parsedStyles = cachedStyles?.parsedStyles;
+    convertedStyles = cachedStyles?.convertedStyles;
   } else {
     // Process styles if not in cache
     parsedStyles = convertStyles ? undefined : collectedStyles.map(parseCssNode);
